@@ -44,7 +44,7 @@ database.ref().on("child_added", function (childSnapshot) {
 
     var firstTimeCon = moment((childSnapshot.val().firstTime), "HH:mm").subtract(1, "years")
 
-    var timeDiff = moment().diff(moment(firstTimeCon), "minutes");
+    var timeDiff = moment().diff(firstTimeCon, "minutes");
 
     tdTrainName.text(childSnapshot.val().trainName);
     tdTrainDestination.text(childSnapshot.val().trainDestination);
