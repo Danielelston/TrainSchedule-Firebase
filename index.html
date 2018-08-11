@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Schedule App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <!-- BootStrap Css Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="text-center">Train Schedule App</h1>
+                <h6 class="text-center">A Moment.js and firebase App</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody id="trainData">
+                <!-- insert train data from database -->
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <div class="container">
+        <div class="card card-default">
+            <div class="card-heading">
+                <div class="container">
+                    <h3 class="card-title">Train Schedule</h3>
+
+                </div>
+            </div>
+            <div class="card-body">
+
+                <!-- Form for new trains -->
+                <div class="container">
+                    <form role="form">
+                        <div class="form-group row">
+                            <label for="trainName-input">Train Name:</label>
+                            <input class="form-control" id="trainName-input" type="text">
+                        </div>
+                        <div class="form-group row">
+                            <label for="trainDestination-input">Destination:</label>
+                            <input class="form-control" id="trainDestination-input" type="text">
+                        </div>
+                        <div class="form-group row">
+                            <label for="firstTime-input">First Train Time (HH:mm - military time):</label>
+                            <input class="form-control" id="firstTime-input" type="text">
+                        </div>
+                        <div class="form-group row">
+                            <label for="frequency-input">Frequency (min):</label>
+                            <input class="form-control" id="frequency-input" type="number">
+                        </div>
+                        <button class="btn btn-default" id="addTrain" type="submit">Submit</button>
+                    </form>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- BootStrap javaScript -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- jQuery javaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <!-- FireBase Script link -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+
+    <!-- Moment.js link -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- App JS -->
+    <script src="assets/javaScript/app.js"></script>
+
+
+
+
+</body>
+
+</html>
