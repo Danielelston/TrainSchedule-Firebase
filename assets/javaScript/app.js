@@ -46,9 +46,18 @@ database.ref().on("child_added", function (childSnapshot) {
 
     var timeDiff = moment().diff(firstTimeCon, "minutes");
 
+    var timeRemainder = timeDiff % childSnapshot.val().frequency;
+    console.log(timeRemainder);
+    var timeTill = childSnapshot.val().frequency - timeRemainder;
+    console.log(timeTill);
+
+    var nextArrival = moment().add(timeTill, "m");
+
     tdTrainName.text(childSnapshot.val().trainName);
     tdTrainDestination.text(childSnapshot.val().trainDestination);
     tdFrequency.text(childSnapshot.val().frequency);
+    tdNextArrival.text(nextArrival);
+    tdTimeAway.text(timeTill);
 
     console.log("train name is " + trainName);
     // console.log("the current time " + timeObj.objCurrentTime);
